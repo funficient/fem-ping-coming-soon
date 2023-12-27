@@ -7,28 +7,63 @@
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
   
   <title>Frontend Mentor | Ping coming soon page</title>
+  <link rel="stylesheet" href="style.css">
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
+  <script defer src="script.js"></script>
+
 </head>
 <body>
 
-  We are launching soon!
+  
+  
+  <main class="content-grid">
+    <header class="logo">
+      <img src="/images/logo.svg" alt="Logo">
+    </header>
+  
+    <section>
 
-  Subscribe and get notified
+      <h1>We are launching <span>soon!</span></h1>
+      <p>Subscribe and get notified</p>
 
-  Notify Me
+      <form id="form">
+        <div class="email-subscription">
 
-  &copy; Copyright Ping. All rights reserved.
+          <input type="email" name="email" id="email" placeholder="Your email address..." required pattern="[^ @]*@[^ @]*"/>
+          <span id="error"></span>
+          <input class="button" type="submit" aria-label="notify me" value="Notify Me"/>
+        </div>
+        
+        
+      </form>
+
+      <img class="" src="/images/illustration-dashboard.png" alt="Image of a dashboard">
+    
+    </section>
+
+  </main>
 
   <footer>
-    <p class="attribution">
-      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-      Coded by <a href="#">Your Name Here</a>.
+    
+      <ul class="social-icons">
+        <li><a href="#" aria-label="facebook">
+              <img class="icon" src="images/401-facebook.svg" alt="Facebook">
+            </a>
+        </li>
+        <li><a href="#" aria-label="twitter">
+              <img class="icon" src="images/407-twitter.svg" alt="Twitter">
+            </a>
+        </li>
+        <li><a href="#" aria-label="instagram">
+              <img class="icon" src="images/403-instagram.svg" alt="Instagram">
+            </a>
+        </li>
+    </ul>
+    <p>
+      &copy; Copyright Ping. All rights reserved.
     </p>
   </footer>
 </body>
+
+
 </html>
