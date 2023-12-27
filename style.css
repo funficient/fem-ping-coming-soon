@@ -17,7 +17,7 @@
 
 
 :root { 
-    --color-primary-blue: hsl(223, 87%, 63%);
+    --color-primary-blue: #4f7df3;
 
     --color-secondary-pale-blue: hsl(223, 100%, 88%);
     --color-secondary-light-red: hsl(354, 100%, 66%);
@@ -103,6 +103,7 @@
 
 h1 {
     font-size: 2.2em;
+    line-height: 3em;
     color: var(--color-neutral-gray);
   }
 
@@ -138,13 +139,21 @@ h1 {
 
 
   input {
-    border: 1px solid #969696;
+    border: 1px solid #4f7df3;
     border-radius: 2em;
     padding: 0.5em 2em;
     width: auto;
     display: block;
     outline: none;
     position: relative;
+  }
+
+  [type="email"] {
+    width: 100%;
+  }
+
+  input:focus {
+    border: 1px solid ##4f7df3;
   }
 
   #error {
@@ -169,9 +178,17 @@ h1 {
 }
 
 .icon {
-  color: var(--color-primary-blue);
-  padding: 1em;
+  color: #4f7df3;
+  border: #4f7df3 1px solid;
+  border-radius: 50%;
+  padding: 0.9em;
+  margin: 0.5em;
   height: 64px;
+}
+
+.social-icons img:hover {
+  fill: white;
+  background-color: hsla(223, 87%, 63%, 0.8);
 }
 
   /*----- Tablet sizing -----*/
@@ -181,16 +198,31 @@ h1 {
   
     h1 {
       font-size: 2.5rem;
-      line-height: 1.7rem;
+      line-height: 2.3rem;
     }
   
   }
   /*----- Desktop styling -----*/
 
-@media (min-width: 1440px) {
+@media (max-width: 1440px) {
 
+  .email-subscription {
+    
+    display: flex;
+    flex-direction: column;
+  }
 
+  .button {
+    width: 100%;
+  }
 
+  .content-grid {
+    
+    grid-template-columns:  10px [breakout-start] 20px [content-start] 1fr [content-end] 20px [breakout-end] 10px ;
+    place-items: center;
+    text-align: center;
+  }
+  
 
   p {
     font-size: 1rem;
@@ -212,7 +244,7 @@ h1 {
   font-size: 0.8em;
   font-weight: 600;
   letter-spacing: 1px;
-  margin: auto;
+  margin: 1em;
   
 }
 
