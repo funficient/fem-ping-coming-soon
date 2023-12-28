@@ -21,25 +21,28 @@
       <img src="./images/logo.svg" alt="Logo">
     </header>
   
-    <section>
+    <section class="">
 
       <h1>We are launching <span>soon!</span></h1>
       <p>Subscribe and get notified</p>
 
       <form id="form">
-        <div class="email-subscription">
+        <div class="email-subscription content-grid">
 
           <input type="email" name="email" id="email" placeholder="Your email address..." required pattern="^\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*$"/>
-          <span id="error"></span>
+          <!-- <p class="error-text hidden">Please provide a valid email address </p> -->
+          <small class="error-text"></small>
           <input class="button" type="submit" aria-label="notify me" value="Notify Me"/>
         </div>
         
-        
       </form>
+    <!-- </section>
 
-      <img class="" src="./images/illustration-dashboard.png" alt="Image of a dashboard">
-    
+    <section class="content-grid breakout"> -->
+      <img class="breakout" src="./images/illustration-dashboard.png" alt="Image of a dashboard">
     </section>
+
+    
 
   </main>
 
@@ -66,6 +69,6 @@
     </p>
   </footer>
 </body>
-
+<script defer src="script.js"></script>
 
 </html>

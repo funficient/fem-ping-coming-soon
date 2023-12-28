@@ -1,19 +1,6 @@
   @import url('https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@300;600;700&family=Montserrat:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,200;1,300;1,400;1,500;1,600;1,700&family=Red+Hat+Display:wght@500;700;900&display=swap');
 
-.content-grid {
-  display: grid;
-  grid-template-columns:  100px [breakout-start] 100px [content-start] 1fr [content-end] 100px [breakout-end] 100px ;
-  place-items: center;
-  text-align: center;
-}
 
-.content-grid > * {
-  grid-column: content;
-}
-
-.content-grid > .breakout {
-  grid-column: breakout;
-}
 
 
 :root { 
@@ -96,34 +83,70 @@
       scroll-behavior: auto !important;
     }
   }
+
+/*----- Desktop first -----*/
+/*-- Utility classes --*/
   
-  /*----- Mobile first -----*/
+  .content-grid {
+    display: grid;
+    grid-template-columns:  100px [breakout-start] 100px [content-start] 1fr [content-end] 100px [breakout-end] 100px ;
+    place-items: center;
+    text-align: center;
+  }
+  
+  .content-grid > * {
+    grid-column: content;
+  }
+  
+  .content-grid > .breakout {
+    grid-column: breakout;
+  }
+
+  
+.button { 
+  cursor: pointer;
+  background: var(--color-primary-blue);
+  color: white;
+  border: none;
+  padding: 1em 3em;
+  border-radius: 2em;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+  font-size: 0.8em;
+  font-weight: 600;
+  letter-spacing: 1px;
+  margin: 1em;
+  
+}
+
+.button:hover {
+  background-color: hsla(223, 87%, 63%, 80%);
+}
  
-
-
 h1 {
     font-size: 2.2em;
-    line-height: 3em;
+    /* line-height: 3em; */
     color: var(--color-neutral-gray);
   }
 
-  h1 span {
+h1 span {
     font-weight: 800;
     color: var(--color-neutral-dark-bleu);
   }
   
-  p {
+p {
     color: var(--color-neutral-gray);
     font-weight: 600;
     margin: 1em;
 
   }
   
-  .logo {
+
+  /* ------------------Body ----------- */
+.logo {
     margin: 3em;
   }
 
-  .email-subscription {
+.email-subscription {
     width: 100%;
     display: flex;
     justify-content: stretch;
@@ -132,13 +155,14 @@ h1 {
     margin: 3em 0 5em 0;
   }
 
-  form {
+form {
     width: 100%;
     position: relative;
+    padding: 0 3em;
   }
 
 
-  input {
+input {
     border: 1px solid #4f7df3;
     border-radius: 2em;
     padding: 0.5em 2em;
@@ -146,27 +170,47 @@ h1 {
     display: block;
     outline: none;
     position: relative;
+    transition: border-color 0.5s ease-out;
   }
 
   [type="email"] {
     width: 100%;
   }
 
-  input:focus {
-    border: 1px solid ##4f7df3;
+input:focus {
+    border: 1px solid #4f7df3;
   }
 
-  #error {
+
+
+  /* input:invalid {
+    border-color: #ff5466;
+  } */
+
+.error-text {
     /* display: none; */
     position: absolute;
     bottom: -1.5em;
-    left: 2em;
-    color: var(--color-secondary-light-red);
+    left: 5em;
+    color: #ff5466;
   }
 
-  
 
-  footer p {
+.hidden {
+    display: none;
+}
+
+/* .error {
+  border: 1px solid #ff5466;
+} */
+
+.error small{
+  display: initial;
+}
+
+
+
+footer p {
     text-align: center;
     font-weight: 300;
   }
@@ -191,10 +235,8 @@ h1 {
   background-color: hsla(223, 87%, 63%, 0.8);
 }
 
-  /*----- Tablet sizing -----*/
-  @media (min-width: 785px) {
-
-
+  /*----- Mobile sizing -----*/
+  @media (max-width: 785px) {
   
     h1 {
       font-size: 2.5rem;
@@ -204,10 +246,9 @@ h1 {
   }
   /*----- Desktop styling -----*/
 
-@media (max-width: 1440px) {
+@media (max-width: 1200px) {
 
   .email-subscription {
-    
     display: flex;
     flex-direction: column;
   }
@@ -217,12 +258,10 @@ h1 {
   }
 
   .content-grid {
-    
-    grid-template-columns:  10px [breakout-start] 20px [content-start] 1fr [content-end] 20px [breakout-end] 10px ;
+    grid-template-columns:  1em [breakout-start] 2em [content-start] 1fr [content-end] 2em [breakout-end] 1em ;
     place-items: center;
     text-align: center;
   }
-  
 
   p {
     font-size: 1rem;
@@ -235,28 +274,7 @@ h1 {
   }
 }
 
-
- /*-- Utility classes --*/
-  
- .button { 
-  cursor: pointer;
-  background: var(--color-primary-blue);
-  color: white;
-  border: none;
-  padding: 1em 3em;
-  border-radius: 2em;
-  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
-  font-size: 0.8em;
-  font-weight: 600;
-  letter-spacing: 1px;
-  margin: 1em;
-  
-}
-
-
-.button:hover {
-  background-color: hsla(223, 87%, 63%, 80%);
-}
+ 
 
 
 
