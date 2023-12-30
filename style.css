@@ -193,21 +193,20 @@ input:focus {
     bottom: -1.5em;
     left: 5em;
     color: #ff5466;
+    font-size: 0.8em;
+    font-weight: 500;
+    font-style: italic;
   }
 
 
-.hidden {
-    display: none;
+.error {
+  color: #ff5466;
+  
 }
 
-/* .error {
-  border: 1px solid #ff5466;
-} */
-
-.error small{
-  display: initial;
+.success {
+  color: #37ad37;
 }
-
 
 
 footer p {
